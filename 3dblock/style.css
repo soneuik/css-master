@@ -1,0 +1,92 @@
+*{
+    margin: 0 ;
+    padding: 0; 
+}
+
+.hero{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    /* https://www.w3schools.com/cssref/playit.asp?filename=playcss_flex-wrap&preval=nowrap */
+    flex-wrap:wrap;    
+    margin: 250px auto; 
+}
+
+.small-img{
+    flex-basis: 100px;
+    cursor: pointer;
+    /* The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky). */
+    /* https://www.w3schools.com/css/css_positioning.asp */
+    position:relative;
+    /* CSS transitions allows you to change property values smoothly, over a given duration. */
+    transition:2s;
+    box-shadow: 27px 41px 13px 4px rgba(0,0,0,0.10);
+}
+
+.small-img img{
+    width:100px;
+}
+
+
+/* 이미지 박스 아래 명암주기 */
+.small-img::after{
+    content:"";
+    width:100px;
+    height: 30px;
+    bottom: -29px;
+    left: 7px;
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute */
+    position: absolute;
+    background: #2d5661;
+    transform: skewX(26deg);
+
+}
+/* 이미지 박스 오른쪽에 명암주기 */
+.small-img::before{
+    content:"";
+    width:15px;
+    height: 100px;
+    right: -14px;
+    top: 15px;
+    position: absolute;
+    background: #3c8898;
+    transform: skewY(65deg);
+
+}
+
+.hero:hover .small-img:nth-child(1){
+    /* translate 대상 옮기기 */
+    transform: translate(60px, 230px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(2){
+    transform: translate(-260px, -150px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(3){
+    transform: translate(-560px, -350px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(4){
+    transform: translate(960px, -850px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(5){
+    transform: translate(-560px, 250px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(6){
+    transform: translate(-370px, 320px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(7){
+    transform: translate(-0, -480px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(8){
+    transform: translate(-280px, -40px) rotate(360deg);
+}
+
+.hero:hover .small-img:nth-child(9){
+    transform: translate(400px, -120px) rotate(360deg);
+}

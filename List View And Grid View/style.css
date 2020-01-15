@@ -1,0 +1,48 @@
+*{
+    margin: 0 ;
+    padding: 0; 
+    font-family: sans-serif;
+}
+  
+.header{
+    margin:20px auto;
+    text-align: center;
+}
+
+.header h1{
+    padding: 10px 0; 
+}
+
+.icons{
+    background: #F44336;
+    margin: 30px auto;
+
+}
+
+.fa{
+    margin: 5px 10px;
+    font-size: 25px !important;
+    cursor: pointer;
+    color: #fff;
+}
+
+.fa:hover{
+    color: #000;
+    transition: .4s;
+}
+ 
+/* row안에 flex, wrap을 줘서 순서대로 column1,2,3,4가 배열되게한다. */
+.row{
+    display:flex;
+    flex-wrap:wrap; 
+}
+
+/* column이 4줄이니까 각 25%씩 부여 */
+#column1, #column2, #column3, #column4{
+    width: 25%;
+}
+
+img{
+    width: 98%;
+    padding: 1%;
+}
